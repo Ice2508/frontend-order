@@ -5,7 +5,7 @@ const id = Number(document.querySelector('.product-card').dataset.id);
 
 productBtn.addEventListener('click', async (e) => {
     e.preventDefault();
-    const response = await fetch('http://localhost:1337/api/orders', {
+    const response = await fetch('https://dedicated-sparkle-ca5141ccb3.strapiapp.com/api/orders', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
