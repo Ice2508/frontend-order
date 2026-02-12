@@ -13,7 +13,11 @@ productBtn.addEventListener('click', async (e) => {
       body: JSON.stringify({data: {productId: id}})
     });
     const data = await response.json();
-    console.log(data);
+    if (data.confirmation_url) {
+    window.location.href = data.confirmation_url;
+  } else {
+    console.log('ошибка в ответе от сервера');
+  }
 })
 
 
